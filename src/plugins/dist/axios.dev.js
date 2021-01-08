@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 var config = {
-  // baseURL: 'http://musicapi.leanapp.cn/' // 设置请求的域名 接口版本 v1 v2
-  baseURL: 'http://music.kele8.cn/' // 设置请求的域名 接口版本 v1 v2
+  baseURL: 'http://musicapi.leanapp.cn/' // 设置请求的域名 接口版本 v1 v2
+  // baseURL: 'http://music.kele8.cn/' // 设置请求的域名 接口版本 v1 v2
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
   // timeout: 60 * 1000, // Timeout
   // withCredentials: true, // Check cross-site Access-Control

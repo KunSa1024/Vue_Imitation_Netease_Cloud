@@ -14,21 +14,24 @@
         <p>{{ rem.name }}</p>
       </router-link>
     </ul>
-
+    <Loading v-show="recommendMusicList.length <= 0"></Loading>
     <Title>最新音乐</Title>
     <Musiclten :newMusicList="newMusicList"></Musiclten>
+    <Loading v-show="newMusicList.length <= 0"></Loading>
   </div>
 </template>
 
 <script>
 import Title from '../components/Title';
 import Musiclten from '../components/Musiclten';
+import Loading from '../components/Loading';
 
 export default {
   name: 'Recommend',
   components: {
     Title,
-    Musiclten
+    Musiclten,
+    Loading
   },
   data() {
     return{
@@ -40,12 +43,12 @@ export default {
     // 获取数据
     next(vm=>{
       vm.$http.get('/personalized?limit=6').then(data=>{
-        console.log(data);
+        // console.log(data);
         vm.recommendMusicList = data.data.result;
       });
 
       vm.$http.get('/personalized/newsong').then(data=>{
-        console.log(data);
+        // console.log(data);
         vm.newMusicList = data.data.result;
       });
     });

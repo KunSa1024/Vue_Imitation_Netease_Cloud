@@ -21,6 +21,7 @@ export default {
         a {
             display: inline-block;
             text-decoration: none;
+            color: #000;
             &.router-link-exact-active {
                 color: red;
                 border-bottom: 2px solid red;

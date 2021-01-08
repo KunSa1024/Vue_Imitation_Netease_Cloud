@@ -35,6 +35,14 @@ var routes = [{
       return _interopRequireWildcard(require('../views/HotSongList.vue'));
     });
   }
+}, {
+  path: '/search',
+  name: 'Search',
+  component: function component() {
+    return Promise.resolve().then(function () {
+      return _interopRequireWildcard(require('../views/Search.vue'));
+    });
+  }
 }];
 var router = new _vueRouter["default"]({
   mode: 'hash',
